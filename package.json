@@ -1,0 +1,17 @@
+{
+  "name": "colorpicker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "budo index.js",
+    "dev": "budo index.js --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "budo": "^11.8.4"
+  }
+}
