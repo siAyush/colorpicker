@@ -222,21 +222,6 @@ function picker(opts = {}) {
       return jsonButton;
     };
 
-    const paletteButton = createButton("◐", async () => {
-      const url = window.prompt("Load Image from URL:");
-      if (url) {
-        try {
-          const img = await loadImage({
-            crossOrigin: "anonymous",
-            url,
-          });
-          redraw(img, true);
-        } catch (err) {
-          window.alert(err.message);
-        }
-      }
-    });
-    paletteButton.style.width = "20px";
 
     let jsonTimer;
     const jsonButton = createButton("copy", () => {
@@ -358,7 +343,6 @@ function picker(opts = {}) {
       pixels = imgData.data;
 
       props.context.drawImage(image, 0, 0, dstWidth, dstHeight);
-      // extractPalette();
       if (doRender) {
         props.play();
       }
